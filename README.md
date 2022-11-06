@@ -49,3 +49,14 @@ print(tip)
 print(type(tip))
 
 ````
+### Dairenin alanı
+````python
+import math
+
+Yaricap=input("Yaricap:"  )
+
+Alan=int(Yaricap)*int(Yaricap)*math.pi
+print(Alan)
+Cevre=2*int(Yaricap)*math.pi
+print(Cevre)
+````
