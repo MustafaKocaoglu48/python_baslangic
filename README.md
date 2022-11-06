@@ -223,6 +223,184 @@ result2=(parola==Girilen_Parola)
 
 print(f'Girilen email doğru mu? {result} Girilen parola doğru mu?{result2}')'''
 ````
+### Python if-else yapısı
+````python
+'''
+girilen_ilk_sayi=int(input("İlk sayıyı giriniz:"))
+girilen_ikinci_sayı=int(input("İkinci sayıyı giriniz:"))
+
+if girilen_ilk_sayi>girilen_ikinci_sayı:
+   print("İlk sayı ikinci sayıdan büyüktür.")
+elif girilen_ilk_sayi<girilen_ikinci_sayı:
+  print("İkinci sayı ilk sayıdan büyüktür.")
+else:
+    print("İki sayı birbirne eşittir.") '''
+'''
+girilecek_sayi=int(input("Bir sayı giriniz:"))
+
+if girilecek_sayi<0:
+    print("Sayı negatiftir.")
+elif girilecek_sayi>0:
+ print("Sayı pozitiftir.")
+else:
+ print("Sayı nötrdür.")'''
+````
+### if-else örnekler
+````python
+
+'''
+girilen_ilk_sayi=int(input("İlk sayıyı giriniz:"))
+girilen_ikinci_sayı=int(input("İkinci sayıyı giriniz:"))
+
+if girilen_ilk_sayi>girilen_ikinci_sayı:
+   print("İlk sayı ikinci sayıdan büyüktür.")
+elif girilen_ilk_sayi<girilen_ikinci_sayı:
+  print("İkinci sayı ilk sayıdan büyüktür.")
+else:
+    print("İki sayı birbirne eşittir.") '''
+'''
+girilecek_sayi=int(input("Bir sayı giriniz:"))
+
+if girilecek_sayi<0:
+    print("Sayı negatiftir.")
+elif girilecek_sayi>0:
+ print("Sayı pozitiftir.")
+else:
+ print("Sayı nötrdür.")'''
+````
+### For örnekleri
+````python
+sayilar=[1,3,5,6,4,23,21,27,72]
+
+# 3 e bölünen sayıları ekrana yazdıran programı yazınız.
+'''
+for a in sayilar:
+    if(a%3==0):
+        print(a)
+'''
+#sayilar listesindeki sayıların tplamı nedir?
+'''
+toplam=0
+for a in sayilar:
+   toplam=toplam+a
+print(toplam)   '''
+
+#sayialr listesindeki tek sayıarın karesini alan programı yazınız.
+'''
+for a in sayilar:
+   if(a%2==1):
+      print(a)
+      '''
+#5 ve daha az harften oluşan şehirleri ekrana yazdıran programı yazınız.
+
+sehirler=['Ankara','Bursa','Rize','Muğla']
+ 
+for a in sehirler:
+    if(len(a)<=5):
+      print(a)
+````
+### while döngüsü
+````python
+x=0
+while True:         #Sonsuz döngü
+    print(x)   
+
+'''
+
+'''
+# 1den 100 e kadar olan sayıları yazar
+x=0
+while x<100:
+    print(x)
+    x+=1
+  '''
+
+# 1den 100 e kadar olan sayıları çift ve tek diye yazdırmak
+'''
+x=0
+while x<100:
+    if(x%2==0):
+        print(f'{x} sayısı çifttir')
+        x+=1
+    else:
+        print(f'{x} sayısı tektir')    
+        x+=1
+'''
+````
+### while örnekleri
+````python
+'''
+sayilar=[1,3,5,43,23,24,54,65]
+
+#Sayılar listesini ekrana yazdırın
+i=0
+while i<len(sayilar):
+    print(sayilar[i])
+    i+=1
+'''
+#Başlangıç ve bitiş değerlerini kullanıcıdan alıp aradaki tek sayıları ekran yazdıran programı yazınız.
+'''
+ilk_deger=int(input("ilk değeri giriniz:"))
+ikinci_deger=int(input("ikinci değeri giriniz:"))
+
+x=ilk_deger
+while x<=ikinci_deger:
+    if x%2==1:
+        print(x)
+        x+=1 
+    else:
+        x+=1
+'''
+
+#1 ile 100 arasındaki sayıları azalan şekilde yazan programı yazınız.
+'''
+deger=100
+while deger>0:
+    print(deger)
+    deger-=1
+'''
+
+#Kullanıcıdan 5 adet sayı alıp sıralayan ve ekrana yazdıran programı yazınız.
+'''
+numbers=[]
+i=0
+while i<5:
+    sayi=int(input('Bir sayı giriniz:'))
+    numbers.append(sayi)
+    i+=1
+
+numbers.sort()  #Sıralamayı yapıyor
+print(numbers)
+'''
+````
+### Sayı bulma oyunu
+````python
+import random
+
+sayi=random.randint(1,100)
+hak=5
+sayac=0
+
+while hak>0:
+    hak-=1
+    sayac+=1
+    tahmin=int(input('Tahmininizi giriniz:'))
+  
+    if sayi==tahmin:
+        puan=100-(sayac-1)*20
+        print(f'Tebrikler {sayac} adımda buldunuz.Toplam puanınız:{puan}')
+        break
+    elif sayi>tahmin:
+        print('yukarı')
+
+    else:
+        print('aşağı')         
+    if hak==0:
+       print(f'Hakkınız bitti tuutulan sayı{sayi}')
+````
+
+
+
 
 
 
