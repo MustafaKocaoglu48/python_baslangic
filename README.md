@@ -2,5 +2,5 @@
 ---
 ### ekrana yazma
 ````python
-print("merhaba)
+print("merhaba")
 ````
