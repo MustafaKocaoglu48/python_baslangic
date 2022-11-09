@@ -398,6 +398,59 @@ while hak>0:
     if hak==0:
        print(f'Hakkınız bitti tuutulan sayı{sayi}')
 ````
+### Metod örnekleri
+````python
+#Gönderilen bir kelimeyi ekranda istenildiği kadar yazan programı yazınız.
+'''
+def yazdir(adet,kelime):
+    print(adet*kelime)
+
+yazdir(12,'Merhaba\n')    
+'''
+#Kendisine gönderilen sınırsız sayıdaki parametreyi listeye atayan  metodu yazınız.
+'''
+def listeyecevir(*params):
+    liste=[]
+    for param in params:
+        liste.append(param)
+      
+    return liste
+
+result=listeyecevir('Merhaba',23,12,54,32)
+print(result)
+'''
+
+#Gönderilen 2 sayı arasındaki asal sayıların tümünü yazan metod.
+'''
+def asalsayi_bul(sayi1,sayi2):
+    for sayi in range(sayi1,sayi2+1):
+        if sayi > 1:
+          for i in range(2,sayi):
+              if(sayi % i ==0):
+                  break
+          else:
+                print(sayi)
+
+sayi1=int(input('Birinci sayıyı giriniz:'))
+sayi2=int(input('İkinci sayıyı giriniz:'))
+
+asalsayi_bul(sayi1,sayi2)
+'''
+#Kendisine gelen sayının tam bölenlerini yazdıran metodu yazınız.
+'''
+def tam_bolenler(sayi):
+    tam_bolenler=[]
+
+    for i in range(2,sayi):
+        if(sayi % i ==0):
+            tam_bolenler.append(i)
+    
+    return tam_bolenler
+
+print(tam_bolenler(20))    
+'''
+
+````
 
 
 
