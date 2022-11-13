@@ -488,6 +488,68 @@ numbers=[2,3,7,3,6,8,5]
 result=list(map(square,numbers))
 print(result)
 '''
+````
+### Global ve Local değişkenler
+````python
+x='global x'
+
+def function():
+     x='local x'
+     print(x)
+
+function()
+print(x)    
+#############################################################
+
+name='cinar'  #Global tanımlama  yaptık
+
+def change_name(new_name):
+    #Local değişken olarak tanımladık
+    name=new_name   
+    print(name)
+
+change_name('Mustafa')
+print(name)
+
+###############################################################
+
+name='global'
+# Burada hello metoduna göre çınar ismi global değişkendir.
+def greeting():
+    name='cinar'
+    def hello():
+        print('hello '+name)
+    hello()
+
+greeting()
+
+#################################################################
+
+x=50
+
+def test(x):
+   
+    print(f'x:{x}')
+    x=100
+    print(f'x in yeni hali{x}')
+    
+test(x)
+print(x)
+
+# x bilgisini global tanımlamak istiyorsak test metodunu sileriz ve x i metod içine alıp 
+#global tanımlarız.
+
+x=50
+
+def test():
+   global x
+   print(f'x:{x}')
+   x=100
+   print(f'x in yeni hali{x}')
+    
+test()
+print(x)
 
 
 ````
+
