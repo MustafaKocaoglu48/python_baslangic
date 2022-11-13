@@ -452,7 +452,7 @@ print(tam_bolenler(20))
 
 ````
 ### Lambda fonksiyonu
-`````python
+````python
 '''
 def square(num):
     return num**2
