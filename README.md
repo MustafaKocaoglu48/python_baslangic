@@ -451,6 +451,46 @@ print(tam_bolenler(20))
 '''
 
 ````
+### Lambda fonksiyonu
+`````python
+'''
+def square(num):
+    return num**2
+
+result=square(2)
+print(result)
+'''
+'''
+def square(num): return num**2
+
+numbers=[1,3,4,5,6,13]
+
+result=list(map(square,numbers))
+print(result)
+'''
+'''
+numbers=[1,2,3,4,20,12]
+def square(num):
+    return num**2
+
+for i in map(square,numbers):
+    print(i)
+'''
+'''
+numbers=[2,3,4,6,3,7]
+result=list(map(lambda num:num**2,numbers))
+
+print(result)
+'''
+'''
+square=lambda num:num**2
+numbers=[2,3,7,3,6,8,5]
+result=list(map(square,numbers))
+print(result)
+'''
+
+
+````
 
 
 
