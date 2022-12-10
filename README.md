@@ -549,6 +549,7 @@ def test():
     
 test()
 print(x)
+````
 ### Python banka uygulaması
 ````python
 MustafaHesap={
@@ -597,5 +598,5 @@ paracek(MustafaHesap,3000)
 paracek(MustafaHesap,2000)
 
 ````
-````
+
 
