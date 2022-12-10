@@ -549,7 +549,53 @@ def test():
     
 test()
 print(x)
+### Python banka uygulaması
+````python
+MustafaHesap={
+    'ad':'Mustafa KOCAOĞLU',
+    'hesap no':'2552446867',
+    'bakiye':3000,
+    'ekhesap':2000
+}
+
+AliHesap={
+    'ad':'Ali KAYA',
+    'hesap no':'4762199749',
+    'bakiye':2500,
+    'ekhesap':1000
+}
+def paracek(hesap,miktar):
+    print(f"Merhaba {hesap['ad']}")
+    if (hesap['bakiye']>=miktar):
+        hesap['bakiye']-=miktar
+        print("Parannızı alabilirsiniz.")
+        bakiyesorgula(MustafaHesap)
+    else:
+        toplam=hesap['bakiye']+hesap['ekhesap']
+        if(toplam>=miktar):
+          ekHesapKullanimi=input("Ek hesap kullanılsın mı?(e,h)")
+           
+          if ekHesapKullanimi=='e':
+             ekHesapKullanilacakmiktar=miktar-hesap['bakiye']
+             hesap['bakiye']=0
+             hesap['ekhesap']-=ekHesapKullanilacakmiktar
+             print('Paranızı alabilirsiniz.')
+             bakiyesorgula(MustafaHesap)
+              
+          else:
+            print(f"{hesap['hesap no']}  nolu hesabınızda{hesap['bakiye']}  bulunmaktadır.")
+        else:
+            print("Üzgünüz bakiyeniz bulunmamaktadır.")
+            bakiyesorgula(MustafaHesap)
 
 
+def bakiyesorgula(hesap):
+    print(f"{hesap['hesap no']} nolu hesabınızda {hesap['bakiye']} bulunmaktadır.Ek hesap limitiniz ise {hesap['ekhesap']} Tl bulunmaktadır.")
+   
+
+paracek(MustafaHesap,3000)
+paracek(MustafaHesap,2000)
+
+````
 ````
 
